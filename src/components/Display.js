@@ -2,7 +2,6 @@ import React from "react";
 import "./Display.css"
 
 const DisplayData = () => {
-  // Retrieve user data from localStorage
   const userData = JSON.parse(localStorage.getItem("userData"));
   console.log("userData", userData);
 
@@ -11,7 +10,6 @@ const DisplayData = () => {
       <div className="display-info-container">
         <h3>Generated UID:</h3>
         <p>{userData.uid}</p>
-        {/* Display Aadhar card with user information */}
         <div className="aadhar-card">
           <h2>Aadhar Card</h2>
           <table>

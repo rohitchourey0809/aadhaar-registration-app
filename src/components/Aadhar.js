@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Aadhar.css"; // Import CSS file for styling
+import "./Aadhar.css"; 
 
 const AadharForm = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +30,6 @@ const AadharForm = () => {
     } else {
       setError("");
       const generatedUid = generateUid();
-      console.log("generatedUid", generatedUid);
       localStorage.setItem(
         "userData",
         JSON.stringify({ formData, uid: generatedUid })
@@ -40,9 +39,7 @@ const AadharForm = () => {
     }
   };
 
-
   const generateUid = () => {
-    // Generate a random 16-digit UID
     const uid = Math.floor(1000000000000000 + Math.random() * 9000000000000000);
     return uid.toString();
   };
